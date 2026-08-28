@@ -1,0 +1,138 @@
+{
+  "seo": {
+    "contact": {
+      "title": "Contact ,  AI Marketing Agency in Tbilisi",
+      "description": "Talk to aiNOW ,  AI marketing agency in Tbilisi. Websites, chatbots, automation, AI content. Fixed-price quote, 48h response, NDA included."
+    },
+    "notFound": {
+      "title": "404 ,  Page Not Found",
+      "description": "The page you're looking for doesn't exist. Return home to explore aiNOW services.",
+      "heading": "Page Not Found",
+      "body": "The page you're looking for doesn't exist or has been moved.",
+      "backHome": "Back to Home"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Leave your number ,  we'll call you back.",
+    "phone": "Phone Number",
+    "phonePlaceholder": "+995 5XX XXX XXX",
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "successTitle": "Received!",
+    "successMessage": "We'll get back to you shortly.",
+    "errorMessage": "Error. Please try again.",
+    "contactInfo": "Contact Information",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "officeLabel": "Office",
+    "office": "Tbilisi, Tornike Eristavi St. 3",
+    "legalLabel": "Registered address",
+    "legal": "Zemo Plato, III Array, N14, Apt. 87, Tbilisi 0163"
+  },
+  "landingNav": {
+    "showcase": "See products",
+    "process": "How it works",
+    "faq": "Questions",
+    "cta": "Contact us"
+  },
+  "landingFooter": {
+    "company": "aiNOW LLC · Tbilisi, Georgia",
+    "familyHeading": "aiNOW family",
+    "companyHeading": "Company",
+    "socialHeading": "Social",
+    "languageHeading": "Language",
+    "contact": "Contact",
+    "sectionShowcase": "See products",
+    "sectionWork": "How it works",
+    "sectionFaq": "Questions",
+    "ctaHuge": "Tell us what you need",
+    "copyright": "© {year} aiNOW. All rights reserved."
+  },
+  "product": {
+    "seo": {
+      "title": "aiCONTENT, AI content studio for your brand",
+      "description": "Reels, posts, captions and scripts, made by AI and posted every day. Your social media on autopilot."
+    },
+    "hero": {
+      "audience": "For owners who want a clear result without extra routine",
+      "owner": "Your",
+      "role": "AI specialist",
+      "lead": "We create your",
+      "sub": "Describe the task once. The system completes the work and shows what is ready.",
+      "taglinePrefix": "AI that",
+      "taglineWorks": "creates",
+      "typewriterWords": "Reels, posts, captions, scripts, thumbnails, hooks, carousels, stories",
+      "typewriterPrefill": "Reels",
+      "ctaResults": "See what we make",
+      "ctaCall": "Book a call",
+      "commitment": "First we show the process on illustrative data. Nothing is published without approval.",
+      "signedBy": "aiNOW checks this process on your data, sets it up, and shows you the result."
+    },
+    "heroStory": {
+      "badge": "Illustrative workflow",
+      "inputLabel": "Business request",
+      "input": "Prepare the next task and show me the finished result.",
+      "bridgeLabel": "iAI understands the request",
+      "bridge": "iAI turns the request into clear steps and sends them to aiPRODUCT.",
+      "productLabel": "aiPRODUCT completes the work",
+      "productAction": "The product follows the approved rules and prepares the result.",
+      "detailOne": "Task checked",
+      "detailTwo": "Result prepared",
+      "resultLabel": "Ready for approval",
+      "result": "The owner sees what is ready and what happens next.",
+      "businessLabel": "What the business gets",
+      "businessValue": "Less routine work and one clear result.",
+      "replay": "Replay"
+    },
+    "work": {
+      "eyebrow": "How it works",
+      "headingPre": "Three steps.",
+      "headingAccent": "From a brief to a full feed.",
+      "s1Title": "You send a short brief",
+      "s1Tag": "two minutes",
+      "s1Desc": "Your topic, your goal, your style. In two minutes we know exactly what to make and where it should land. No long forms, no meetings.",
+      "s2Title": "AI creates the content",
+      "s2Tag": "same day",
+      "s2Desc": "Reels, posts and captions, ready for review the same day. Our trend analyzer checks what people are watching 24/7, so every piece rides a live trend, not a guess.",
+      "s3Title": "You approve and post",
+      "s3Tag": "your call",
+      "s3Desc": "Tweak anything, hit publish, watch it grow. What works we scale, what does not we cut. You keep a steady stream every week and full control.",
+      "s4Title": "We learn your brand",
+      "s4Tag": "every cycle",
+      "s4Desc": "Each batch sharpens the voice. The hooks that get saved and shared become the template for the next round, so the feed compounds instead of resetting.",
+      "s5Title": "Data-driven optimization",
+      "s5Tag": "weekly cycles",
+      "s5Desc": "We measure saves, shares and reach, not vanity likes. The formats that move the needle get more airtime. The ones that do not get retired.",
+      "s6Title": "Support or handover",
+      "s6Tag": "your choice",
+      "s6Desc": "We stay on monthly support and keep the feed running, or we hand everything over with full templates and documentation for your team to take over."
+    },
+    "faq": {
+      "headingPre": "Questions to answer",
+      "headingAccent": "before the music starts",
+      "subtitle": "Clear facts about the music, uniqueness, and usage terms.",
+      "q1": "What is <brand></brand>?",
+      "a1": "A custom background-music service for businesses. We turn a venue description into a music profile, create original tracks, and arrange them into a full-day playlist.",
+      "q2": "Can I play this music in a cafe or restaurant?",
+      "a2": "Before launch, we agree the territory, term, and type of use, then record them in the customer agreement and track register. The exact documents depend on the venue and jurisdiction.",
+      "q3": "Will this music be unique to our venue?",
+      "a3": "The playlist is created from your venue profile instead of copied from a mass catalog. Any exclusivity requirement for specific tracks is stated separately in the agreement.",
+      "q4": "Can the playlist be updated?",
+      "a4": "Yes. We can change the daypart energy, season, mood, and individual tracks while preserving one recognizable character for the space.",
+      "q5": "How do we start?",
+      "a5": "Describe the venue and leave a contact number. We clarify the format, prepare a music profile, and create a first illustrative sample for review."
+    },
+    "cta": {
+      "heading": "Ready to fill your content calendar?",
+      "subtitle": "Tell us about your brand. We will show you a sample, free.",
+      "phoneLabel": "Phone number",
+      "phoneSubmit": "Call me",
+      "phoneNote": "We will call you within 24h",
+      "orWrite": "Or write to us:"
+    },
+    "wordmark": {
+      "line": "Content that posts itself."
+    }
+  }
+}

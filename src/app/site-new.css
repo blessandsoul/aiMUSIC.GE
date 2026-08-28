@@ -1,0 +1,10 @@
+/* Shared new-design helpers (aiNOW landing language), available site-wide.
+   font-display = Bricolage headings; eyebrow = JetBrains Mono kicker.
+   The off-white dot-grid canvas + near-black text already come from globals.css
+   + the theme, so these two helpers are all the foreground markup needs. */
+.font-display {
+  font-family: var(--font-iai-ui);
+}
+.eyebrow {
+  font-family: var(--font-iai-data);
+}
