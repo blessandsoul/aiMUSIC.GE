@@ -51,62 +51,59 @@
   },
   "product": {
     "seo": {
-      "title": "aiCONTENT, AI content studio for your brand",
-      "description": "Reels, posts, captions and scripts, made by AI and posted every day. Your social media on autopilot."
+      "title": "aiMUSIC: original music for businesses",
+      "description": "Original music profiles and playlists for cafes, restaurants, salons, hotels, fitness studios, and other business spaces."
     },
     "hero": {
-      "audience": "For owners who want a clear result without extra routine",
+      "audience": "For cafes, restaurants, salons, hotels, fitness studios, and other business spaces",
       "owner": "Your",
-      "role": "AI specialist",
-      "lead": "We create your",
-      "sub": "Describe the task once. The system completes the work and shows what is ready.",
-      "taglinePrefix": "AI that",
-      "taglineWorks": "creates",
-      "typewriterWords": "Reels, posts, captions, scripts, thumbnails, hooks, carousels, stories",
-      "typewriterPrefill": "Reels",
-      "ctaResults": "See what we make",
-      "ctaCall": "Book a call",
-      "commitment": "First we show the process on illustrative data. Nothing is published without approval.",
-      "signedBy": "aiNOW checks this process on your data, sets it up, and shows you the result."
+      "role": "music director",
+      "lead": "creates music",
+      "sub": "aiMUSIC creates original music for businesses. Describe your space and receive music shaped around its character, with clear terms of use.",
+      "typewriterWords": "for cafes,for restaurants,for salons,for hotels",
+      "typewriterPrefill": "for cafes",
+      "ctaResults": "Request a first sample",
+      "commitment": "First we agree the music profile. Before launch, the territory, term, and type of use are recorded in the agreement.",
+      "signedBy": "aiNOW defines the profile, creates the music, and prepares the documents required for launch."
     },
     "heroStory": {
-      "badge": "Illustrative workflow",
-      "inputLabel": "Business request",
-      "input": "Prepare the next task and show me the finished result.",
-      "bridgeLabel": "iAI understands the request",
-      "bridge": "iAI turns the request into clear steps and sends them to aiPRODUCT.",
-      "productLabel": "aiPRODUCT completes the work",
-      "productAction": "The product follows the approved rules and prepares the result.",
-      "detailOne": "Task checked",
-      "detailTwo": "Result prepared",
-      "resultLabel": "Ready for approval",
-      "result": "The owner sees what is ready and what happens next.",
-      "businessLabel": "What the business gets",
-      "businessValue": "Less routine work and one clear result.",
+      "badge": "Illustrative music workflow",
+      "inputLabel": "Venue description",
+      "input": "A calm cafe by day, warmer and more energetic in the evening.",
+      "bridgeLabel": "aiMUSIC defines the profile",
+      "bridge": "Mood, tempo, energy, dayparts, and intended use become one approved music brief.",
+      "productLabel": "Original tracks are prepared",
+      "productAction": "Tracks follow the agreed profile and are arranged into a day-long playlist.",
+      "detailOne": "Music profile approved",
+      "detailTwo": "Usage terms recorded",
+      "resultLabel": "Ready to review",
+      "result": "The owner hears the first sample before the playlist is launched.",
+      "businessLabel": "What the venue gets",
+      "businessValue": "A consistent sound for the space and clear usage terms.",
       "replay": "Replay"
     },
     "work": {
       "eyebrow": "How it works",
-      "headingPre": "Three steps.",
-      "headingAccent": "From a brief to a full feed.",
-      "s1Title": "You send a short brief",
+      "headingPre": "Six steps.",
+      "headingAccent": "From a venue description to a daily playlist.",
+      "s1Title": "Describe your space",
       "s1Tag": "two minutes",
-      "s1Desc": "Your topic, your goal, your style. In two minutes we know exactly what to make and where it should land. No long forms, no meetings.",
-      "s2Title": "AI creates the content",
-      "s2Tag": "same day",
-      "s2Desc": "Reels, posts and captions, ready for review the same day. Our trend analyzer checks what people are watching 24/7, so every piece rides a live trend, not a guess.",
-      "s3Title": "You approve and post",
-      "s3Tag": "your call",
-      "s3Desc": "Tweak anything, hit publish, watch it grow. What works we scale, what does not we cut. You keep a steady stream every week and full control.",
-      "s4Title": "We learn your brand",
-      "s4Tag": "every cycle",
-      "s4Desc": "Each batch sharpens the voice. The hooks that get saved and shared become the template for the next round, so the feed compounds instead of resetting.",
-      "s5Title": "Data-driven optimization",
-      "s5Tag": "weekly cycles",
-      "s5Desc": "We measure saves, shares and reach, not vanity likes. The formats that move the needle get more airtime. The ones that do not get retired.",
-      "s6Title": "Support or handover",
-      "s6Tag": "your choice",
-      "s6Desc": "We stay on monthly support and keep the feed running, or we hand everything over with full templates and documentation for your team to take over."
+      "s1Desc": "Choose the venue type or briefly describe its atmosphere, guests, and daily rhythm.",
+      "s2Title": "We define the music profile",
+      "s2Tag": "one short brief",
+      "s2Desc": "We agree the genre, tempo, energy, and sound that fit the space.",
+      "s3Title": "We create original tracks",
+      "s3Tag": "for your space",
+      "s3Desc": "Tracks are created from the agreed music profile instead of copied from a mass catalog.",
+      "s4Title": "We build the day playlist",
+      "s4Tag": "from opening to close",
+      "s4Desc": "The music follows each daypart: a calm opening, active hours, and a softer evening.",
+      "s5Title": "We agree the usage terms",
+      "s5Tag": "in writing",
+      "s5Desc": "The territory, term, type of use, and any exclusivity conditions are recorded in the agreement.",
+      "s6Title": "We refresh the music",
+      "s6Tag": "when needed",
+      "s6Desc": "When the season, guests, or daily schedule changes, the playlist can be refreshed while keeping one recognizable character."
     },
     "faq": {
       "headingPre": "Questions to answer",
@@ -124,15 +121,22 @@
       "a5": "Describe the venue and leave a contact number. We clarify the format, prepare a music profile, and create a first illustrative sample for review."
     },
     "cta": {
-      "heading": "Ready to fill your content calendar?",
-      "subtitle": "Tell us about your brand. We will show you a sample, free.",
+      "heading": "How should your space sound?",
+      "subtitle": "Leave your number. We will start with a short brief and the first music profile.",
       "phoneLabel": "Phone number",
-      "phoneSubmit": "Call me",
-      "phoneNote": "We will call you within 24h",
+      "phoneSubmit": "Request a first sample",
+      "phoneNote": "We will contact you to clarify the atmosphere and format of the space.",
       "orWrite": "Or write to us:"
     },
     "wordmark": {
-      "line": "Content that posts itself."
+      "heading": "What your space receives",
+      "items": [
+        "Its own music profile",
+        "A playlist for the full rhythm of the day",
+        "Original tracks instead of a mass catalog",
+        "Clear usage terms recorded in the agreement"
+      ],
+      "line": "Music that belongs to the atmosphere of your space."
     }
   }
 }

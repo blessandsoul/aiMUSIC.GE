@@ -40,7 +40,7 @@ export const SITE = {
    * find-replace one for the other.
    */
   defaultLocale: "ka",
-  locales: ["ka"],
+  locales: ["ka", "en", "ru"],
 
   /** PWA manifest. Not locale-aware (Next metadata routes are build-time). */
   manifest: {
