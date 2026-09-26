@@ -19,6 +19,7 @@ export interface BlogPostMeta {
   sources: string[];
   wordCount: number;
   coverImage: string;
+  coverAlt?: string;
   coverQuery?: string;
   coverCredit?: {
     credit: string;

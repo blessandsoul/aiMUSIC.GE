@@ -33,7 +33,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPost(slug, locale);
   if (!post) return { title: 'Not found', robots: { index: false, follow: false } };
   const canonical = localeUrl(locale, `/blog/${slug}`);
-  const ogImage = localeUrl(locale, `/blog/${slug}/opengraph-image`);
+  const ogImage = post.coverImage
+    ? new URL(post.coverImage, SITE.baseUrl).toString()
+    : localeUrl(locale, `/blog/${slug}/opengraph-image`);
   return {
     title: post.title,
     description: post.excerpt,

@@ -2,7 +2,7 @@ import { SITE } from '@/config/site';
 
 const COPY = {
   ka: {
-    eyebrow: 'aiNOW-ის პრაქტიკული გზამკვლევები',
+    eyebrow: 'aiMUSIC-ის პრაქტიკული გზამკვლევები',
     title: 'ბლოგი',
     subtitle: 'მარტივი პასუხები, სამუშაო მაგალითები და გადაწყვეტილების მისაღებად საჭირო ფაქტები.',
     latest: 'ყველა მასალა',
@@ -17,7 +17,7 @@ const COPY = {
     minRead: 'წაკითხვის დრო',
   },
   en: {
-    eyebrow: 'Practical guides by aiNOW',
+    eyebrow: 'Practical guides by aiMUSIC',
     title: 'Blog',
     subtitle: 'Clear answers, working examples and the facts you need to make a decision.',
     latest: 'All guides',
@@ -32,7 +32,7 @@ const COPY = {
     minRead: 'Reading time',
   },
   ru: {
-    eyebrow: 'Практические материалы aiNOW',
+    eyebrow: 'Практические материалы aiMUSIC',
     title: 'Блог',
     subtitle: 'Простые ответы, рабочие примеры и факты, которые помогают принять решение.',
     latest: 'Все материалы',

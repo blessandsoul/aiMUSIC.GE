@@ -17,7 +17,7 @@ export const PRODUCT_PAGES = {
     status: 'public',
   },
   blog: {
-    status: 'off' as PageStatus,
+    status: 'public' as PageStatus,
   },
   integrations: {
     status: 'off' as PageStatus,
@@ -57,6 +57,7 @@ export const PRODUCT_PAGES = {
       'productPages.common',
       'productPages.pricing',
       'productPages.contact',
+      'productPages.blog',
       'productPages.integrations',
       'productPages.security',
       'productPages.privacy',
@@ -66,6 +67,7 @@ export const PRODUCT_PAGES = {
       'productPages.common',
       'productPages.pricing',
       'productPages.contact',
+      'productPages.blog',
       'productPages.integrations',
       'productPages.security',
       'productPages.privacy',
@@ -75,6 +77,7 @@ export const PRODUCT_PAGES = {
       'productPages.common',
       'productPages.pricing',
       'productPages.contact',
+      'productPages.blog',
       'productPages.integrations',
       'productPages.security',
       'productPages.privacy',

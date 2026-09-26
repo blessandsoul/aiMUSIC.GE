@@ -131,6 +131,7 @@ function toMeta(slug: string, locale: string, data: Record<string, unknown>, sou
     sources: asList(data.sources),
     wordCount: words,
     coverImage: asText(data.coverImage) || `/${locale}/blog/${slug}/opengraph-image`,
+    coverAlt: asText(data.coverAlt) || undefined,
     coverQuery: asText(data.coverQuery) || undefined,
   };
 }

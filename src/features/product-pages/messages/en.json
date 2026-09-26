@@ -10,6 +10,10 @@
     "privacy": "Privacy",
     "terms": "Terms"
   },
+  "blog": {
+    "title": "Blog",
+    "description": "Practical aiMUSIC guides for choosing and using music in a business venue."
+  },
   "pricing": {
     "seoTitle": "{product} pricing and project scope",
     "seoDescription": "See how {product} is scoped, what is included, what changes the estimate, and when payment starts.",
