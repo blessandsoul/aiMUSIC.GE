@@ -47,7 +47,6 @@ next-env.d.ts
 /tests/__pycache__/
 /public/images/
 /public/videos/
-/public/landing/
 /public/legal/
 /public/projects/
 /public/team/
