@@ -45,11 +45,6 @@ next-env.d.ts
 # from media.aimusic.ge, so these files do not belong in the production repo.
 /_qa_aimusic_*.png
 /tests/__pycache__/
-/public/images/
-/public/videos/
-/public/legal/
-/public/projects/
-/public/team/
 
 # large regeneratable translation cache (not deployed; scripts/translate_*.py rebuild it)
 scripts/translation_cache_evergreen.json
