@@ -1,88 +1,13 @@
-import { SITE } from '@/config/site';
-import { PUBLIC_ROUTES } from '@/features/product-pages/routes';
-import {
-  MACHINE_FAQ,
-  MACHINE_PUBLIC_PAGES,
-  MACHINE_REVIEWED_ON,
-  PRODUCT_MACHINE_INTEGRATIONS,
-  PRODUCT_BRAND,
-  machineTextResponse,
-} from '@/features/product-pages/machine';
-
-export const dynamic = 'force-static';
-
-export function GET() {
-  const lines: string[] = [
-    `# ${PRODUCT_BRAND}, full product reference`,
-    '',
-    `Last reviewed: ${MACHINE_REVIEWED_ON}`,
-    `Canonical website: ${SITE.baseUrl}`,
-    '',
-    '## Definition',
-    '',
-    SITE.seo.summary,
-    '',
-    '## Intended customer',
-    '',
-    SITE.seo.audienceName,
-    '',
-    `## What ${PRODUCT_BRAND} does`,
-    '',
-    ...SITE.seo.features.map((feature) => `- ${feature}`),
-    '',
-    '## Integrations and availability',
-    '',
-    ...PRODUCT_MACHINE_INTEGRATIONS.flatMap((integration) => [
-      `### ${integration.platform}`,
-      '',
-      `Status: ${integration.status}.`,
-      `Available now: ${integration.availableNow ? 'yes' : 'no'}.`,
-      ...(integration.description ? [integration.description] : []),
-      ...(integration.requirements.length > 0
-        ? [
-            'Requirements:',
-            ...integration.requirements.map((requirement) => `- ${requirement}`),
-          ]
-        : []),
-      '',
-    ]),
-    '## Product boundary',
-    '',
-    SITE.seo.boundary,
-    '',
-    '## Known limits',
-    '',
-    ...SITE.seo.limits.map((limit) => `- ${limit}`),
-    '',
-    '## Commitment',
-    '',
-    SITE.seo.commitment,
-    '',
-    '## Public pages',
-    '',
-    ...PUBLIC_ROUTES.map((route, index) => {
-      const page = MACHINE_PUBLIC_PAGES[index];
-      return `- ${route.key}: ${page.url}`;
-    }),
-    '',
-    '## Frequently asked questions',
-    '',
-    ...MACHINE_FAQ.flatMap(({ question, answer }) => [
-      `### ${question}`,
-      '',
-      answer,
-      '',
-    ]),
-    '## Verification',
-    '',
-    `- Provider: aiNOW, https://ainow.ge`,
-    `- Structured summary: ${SITE.baseUrl}/ai/summary.json`,
-    `- Structured service facts: ${SITE.baseUrl}/ai/service.json`,
-    `- Structured integration status: ${SITE.baseUrl}/ai/integrations.json`,
-    `- Structured FAQ: ${SITE.baseUrl}/ai/faq.json`,
-    `- Concise index: ${SITE.baseUrl}/llms.txt`,
-    '',
-  ];
-
-  return machineTextResponse(lines.join('\n'));
+import { getPosts, getPostBySlug } from "@/features/blog/lib/api";
+import { INDEXED_LOCALES } from "@/i18n/seo-locales";
+import { PUBLIC_FACTS, PUBLIC_POSITIONING, PUBLIC_PRODUCT_CATALOG } from "@/lib/public-facts";
+const BASE_URL = "https://aimusic.ge";
+function articleUrl(locale: string, slug: string) { return locale === "ka" ? `${BASE_URL}/blog/${slug}` : `${BASE_URL}/${locale}/blog/${slug}`; }
+function plain(content: string) { return content.replace(/<[^>]+>/g, "").replace(/\n{3,}/g, "\n\n").trim(); }
+export async function GET() {
+  const articles: string[] = [];
+  for (const locale of INDEXED_LOCALES) { const posts = await getPosts(locale); articles.push(`## ${locale.toUpperCase()} authored articles (${posts.length})`, ""); for (const post of posts) { const full = await getPostBySlug(post.slug, locale); if (!full?.content) continue; articles.push(`### ${full.title}`, "", `Language: ${locale}`, `URL: ${articleUrl(locale, full.slug)}`, `Published: ${full.date}`, `Author: ${full.author.name}`, "", plain(full.content), "", "---", ""); } }
+  const product = PUBLIC_PRODUCT_CATALOG[0];
+  const lines = [`# ${PUBLIC_FACTS.brand.name} — full authored content`, "", `> ${PUBLIC_FACTS.description}`, "", `Product: ${product.name}`, `URL: ${BASE_URL}`, `Description: ${product.description}`, `Price: ${product.startingPrice}`, "", "## Workflow", "", PUBLIC_POSITIONING.statement, ...PUBLIC_POSITIONING.workflow.map((step, i) => `${i + 1}. ${step}`), "", `Catalog: ${BASE_URL}/ai/catalog.json`, `FAQ: ${BASE_URL}/ai/faq.json`, "", ...articles];
+  return new Response(`${lines.join("\n")}\n`, { headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "public, max-age=86400, stale-while-revalidate=3600" } });
 }

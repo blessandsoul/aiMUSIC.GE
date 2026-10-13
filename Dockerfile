@@ -9,12 +9,16 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-RUN npm run build
+ENV LANDING_CLONE_PREVIEW=0
+ENV NEXT_PUBLIC_LANDING_CLONE_PREVIEW=0
+RUN npm run build -- --webpack
 
 # Stage 3: Production runner
 FROM node:20-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
+ENV LANDING_CLONE_PREVIEW=0
+ENV NEXT_PUBLIC_LANDING_CLONE_PREVIEW=0
 
 RUN addgroup --system --gid 1001 nodejs && \
     adduser --system --uid 1001 nextjs

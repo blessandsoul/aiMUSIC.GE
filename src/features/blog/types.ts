@@ -24,7 +24,7 @@ export interface BlogPostMeta {
   coverCredit?: {
     credit: string;
     creditUrl: string;
-    source: 'unsplash' | 'pexels';
+    source: 'generated' | 'unsplash' | 'pexels';
     sourceUrl: string;
   };
 }

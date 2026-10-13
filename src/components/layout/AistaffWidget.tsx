@@ -1,65 +1,40 @@
 'use client';
 
-import { useEffect } from 'react';
 import Script from 'next/script';
+import { usePathname } from 'next/navigation';
+import { CLINIC_PATH } from '@/features/clinics/clinic-bot';
+import { NICHE_LANDING_PATHS } from '@/features/niches/paths';
+import { isLandingCloneClientPreview } from '@/lib/landing-clone-preview';
 
-const AINOW_MARKETING_BOT_ID = '5044f2f0-ab9b-417f-83cc-cc5c633bb0d5';
+const INVOICE_ROUTE = /(^|\/)invoices(?:\/|$)/;
 
-function localizeLauncher(): void {
-  const bubble = document.getElementById('widget-chat-bubble');
-  if (!bubble) return;
+/* Site-wide aiSTAFF chat bubble. Hidden on the dedicated /aistaff QR demo,
+   which renders its own full-screen chat, a floating bubble there would be a
+   confusing second chat entry point. This is mounted in the root layout
+   OUTSIDE NextIntlClientProvider, so we use next/navigation's usePathname
+   (no intl context). It returns the full, locale-prefixed path, e.g.
+   "/aistaff" (ka default) or "/en/aistaff", so endsWith covers all locales.
 
-  bubble.setAttribute('aria-label', 'AI ასისტენტის გახსნა');
+   Clinic landing: renders its own native inline demo chat (ClinicChatDemo),
+   so the default bubble hides there too: one chat entry point per page. */
+export function AistaffWidget() {
+    const pathname = usePathname();
+    if (isLandingCloneClientPreview()) return null;
+    if (pathname?.includes('/admin')) return null;
+    if (pathname?.includes('/questionnaires/')) return null;
+    if (INVOICE_ROUTE.test(pathname ?? '')) return null;
+    if (pathname?.endsWith('/aistaff')) return null;
+    if (pathname?.includes(CLINIC_PATH)) return null;
+    // Every niche landing renders its own inline demo, so hide the bubble there
+    // too (one chat entry point per page). Explicit list, not a blunt
+    // /ai-chatbot- prefix, so ai-chatbot-development-georgia keeps its bubble.
+    if (NICHE_LANDING_PATHS.some((p) => pathname?.includes(p))) return null;
 
-  const compact = window.innerWidth < 768;
-  const baseBottom = bubble.dataset.aimusicBaseBottom || window.getComputedStyle(bubble).bottom || '24px';
-  bubble.dataset.aimusicBaseBottom = baseBottom;
-  const consentPending = compact && Boolean(document.querySelector('[data-analytics-consent="true"]'));
-  bubble.style.bottom = baseBottom;
-  bubble.style.opacity = consentPending ? '0' : '1';
-  bubble.style.pointerEvents = consentPending ? 'none' : 'auto';
-  bubble.style.transform = consentPending ? 'scale(0.94)' : 'scale(1)';
-
-  const themeHost = bubble.querySelector<HTMLElement>('.iai-theme-light');
-  const cta = bubble.querySelector('.iai-cta') || themeHost?.shadowRoot?.querySelector('.iai-cta');
-  const textNode = cta
-    ? Array.from(cta.childNodes).find((node) => node.nodeType === Node.TEXT_NODE)
-    : undefined;
-  if (textNode) textNode.nodeValue = 'მოგვწერეთ';
-}
-
-export function AistaffWidget(): React.ReactElement {
-  useEffect(() => {
-    let delayedSync: number | null = null;
-    const retryTimers: number[] = [];
-    const syncLauncher = (): void => {
-      localizeLauncher();
-      window.requestAnimationFrame(localizeLauncher);
-      if (delayedSync !== null) window.clearTimeout(delayedSync);
-      delayedSync = window.setTimeout(localizeLauncher, 300);
-    };
-
-    syncLauncher();
-    const observer = new MutationObserver(syncLauncher);
-    observer.observe(document.body, { childList: true, subtree: true });
-    for (const delay of [700, 1400, 2800]) {
-      retryTimers.push(window.setTimeout(localizeLauncher, delay));
-    }
-    window.addEventListener('resize', syncLauncher);
-    return () => {
-      observer.disconnect();
-      window.removeEventListener('resize', syncLauncher);
-      if (delayedSync !== null) window.clearTimeout(delayedSync);
-      retryTimers.forEach((timer) => window.clearTimeout(timer));
-    };
-  }, []);
-
-  return (
-    <Script
-      src="https://aistaff.ge/widget.js?v=20260816-1"
-      data-bot-id={AINOW_MARKETING_BOT_ID}
-      strategy="afterInteractive"
-      onReady={localizeLauncher}
-    />
-  );
+    return (
+        <Script
+            src="https://aistaff.ge/widget.js?v=20260816-1"
+            data-bot-id="5044f2f0-ab9b-417f-83cc-cc5c633bb0d5"
+            strategy="afterInteractive"
+        />
+    );
 }
