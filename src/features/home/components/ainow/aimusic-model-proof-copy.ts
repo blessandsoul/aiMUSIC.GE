@@ -110,6 +110,7 @@ export const AIMUSIC_MODEL_PROOF_COPY: Record<"ka" | "en" | "ru", AiMusicModelPr
       { value: "ფლეილისტი", label: "დღის სტრუქტურა", detail: "განმეორებადი არჩევანი მკაფიოდ ჩანს.", image: images.playlist },
       { value: "გამოყენება", label: "წყაროს დოკუმენტი", detail: "ვადა და ტერიტორია წერილობით ფიქსირდება.", image: images.usage },
       { value: "შემოწმება", label: "ადამიანის დამტკიცება", detail: "გამოყენება შეთანხმებულ შემოწმებას მიჰყვება.", image: images.review },
+      { value: "TikTok", label: "ვერიფიკაცია გავლილია", detail: "TikTok-მა aiNOW-ს ჩატის, რეკლამისა და გამოქვეყნების API-ებზე წვდომა დაუმტკიცა.", image: "/images/model-trust/tiktok-verified-glass-v1.png" },
     ],
   },
   en: {
@@ -152,6 +153,7 @@ export const AIMUSIC_MODEL_PROOF_COPY: Record<"ka" | "en" | "ru", AiMusicModelPr
       { value: "Playlist", label: "DAILY STRUCTURE", detail: "The repeatable selection stays visible.", image: images.playlist },
       { value: "Usage", label: "SOURCE RECORD", detail: "Term and territory are written down.", image: images.usage },
       { value: "Review", label: "HUMAN APPROVAL", detail: "Use follows the agreed review boundary.", image: images.review },
+      { value: "TikTok", label: "Verification completed", detail: "TikTok approved aiNOW's access to chat, advertising and publishing APIs.", image: "/images/model-trust/tiktok-verified-glass-v1.png" },
     ],
   },
   ru: {
@@ -194,6 +196,7 @@ export const AIMUSIC_MODEL_PROOF_COPY: Record<"ka" | "en" | "ru", AiMusicModelPr
       { value: "Плейлист", label: "СТРУКТУРА ДНЯ", detail: "Повторяемый выбор остаётся видимым.", image: images.playlist },
       { value: "Использование", label: "ДОКУМЕНТ ИСТОЧНИКА", detail: "Срок и территория фиксируются письменно.", image: images.usage },
       { value: "Проверка", label: "ПОДТВЕРЖДЕНИЕ ЧЕЛОВЕКОМ", detail: "Использование следует согласованной проверке.", image: images.review },
+      { value: "TikTok", label: "Верификация пройдена", detail: "TikTok одобрил aiNOW доступ к API чатов, рекламы и публикации.", image: "/images/model-trust/tiktok-verified-glass-v1.png" },
     ],
   },
 };
